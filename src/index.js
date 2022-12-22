@@ -8,14 +8,14 @@ const port = 3000;
 app.use(bodyparser.json());
 
 mongoose.connect("mongoDB link to connect")
-.then(()=>{
-    console.log("mongo db is connected")
-}).catch((err)=>{
-    console.log(err)
-})
+    .then(() => {
+        console.log("mongo db is connected")
+    }).catch((err) => {
+        console.log(err)
+    })
 
 app.use('/', route)
 
-app.listen(port , ()=>{
-    console.log('listening the port at ',port)
+app.listen(port, () => {
+    console.log('listening the port at ', port)
 })

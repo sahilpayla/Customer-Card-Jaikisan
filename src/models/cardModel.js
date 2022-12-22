@@ -5,11 +5,11 @@ let cardSchema = new mongoose.Schema({
     cardNumber: {
         type: Number,
         required: true,
-        unique:true,
+        unique: true,
     },
     cardType: {
         type: String,
-        required: true
+        required: true,
     },
     customerName: {
         type: String,
@@ -19,16 +19,16 @@ let cardSchema = new mongoose.Schema({
         type: String,
         required: true,
         enum: ["ACTIVE", "INACTIVE"],
-        default: "ACTIVE"
+        default: "ACTIVE",
     },
     vision: {
-        type: String
+        type: String,
     },
     customerId: {
+        ref: 'Customer',
         required: true,
-        type:String,
-        unique:true,
-
+        type: String,
+        unique: true,
     }
 
 }, {

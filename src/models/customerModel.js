@@ -13,7 +13,7 @@ const customerSchema = new mongoose.Schema({
         type: String,
         length: 10,
         required: true,
-        unique:true,
+        unique: true,
     },
     DOB: {
         type: Date,
@@ -22,7 +22,7 @@ const customerSchema = new mongoose.Schema({
     emailId: {
         type: String,
         required: true,
-        unique:true,
+        unique: true,
     },
     address: {
         type: String,
@@ -31,12 +31,12 @@ const customerSchema = new mongoose.Schema({
     customerId: {
         type: String,
         status: true,
-        unique:true,
+        unique: true,
     },
     status: {
         type: String,
         enum: ["ACTIVE", "INACTIVE"],
-        default:"ACTIVE"
+        default: "ACTIVE"
     }
 
 }, {
